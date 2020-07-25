@@ -1,0 +1,162 @@
+.main_color {
+    color: $green;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    background: url('~@/assets/img/intro.jpg') center no-repeat;
+    background-size: cover;
+
+    .container {
+        @include container;
+    }
+
+    &__header {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__main {
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        align-items: center;
+        margin-top: 100px;
+
+        .container {
+            @include container(900px);
+        }
+
+        .button {
+            @include button;
+            width: 550px;
+            height: 60px;
+
+            &:hover {
+                cursor: pointer;
+
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__logo {
+            text-transform: uppercase;
+            text-align: center;
+            color: $green;
+            margin: 0 35px;
+        }
+
+        &__info {
+            text-align: center;
+
+            margin: 0 35px;
+
+            p {
+                margin: 0;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+
+    .nav {
+        a {
+            margin: 0 15px;
+            color: #000000;
+            text-decoration: none;
+            transition: color .2s linear;
+            position: relative;
+
+            &:hover {
+                color: $green;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $green;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity .2s linear;
+
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.calculation {
+    width: 100%;
+    height: 100vh;
+
+
+    .container {
+        @include container;
+    }
+
+    h1 {
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    &__form_and_check {
+        display: flex;
+        margin-top: 100px;
+
+        .form-container {
+            background-color: $green;
+            width: 50%;
+            text-align: center;
+            
+            .form {
+                display: flex;
+                align-items: center;
+
+                input {
+                    margin: 20px;
+                    border-radius: 15px;
+                    height: 30px;
+                    width: 80%;
+                }
+
+                .form__left {
+                    text-align: center;
+                }
+
+                .form__right {
+                    text-align: center;
+                }
+            }
+
+            .button {
+                @include button(#a42828);
+                width: 500px;
+                height: 60px;
+                margin: 15px;
+                &:hover {
+                    cursor: pointer;
+
+                }
+            }
+        }
+
+
+    }
+}

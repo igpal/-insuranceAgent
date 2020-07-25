@@ -1,0 +1,18 @@
+@mixin container($maxWidth:1200px) {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+@mixin button($color:$green) {
+    display: flex;
+    margin: 0 auto;
+    background-color: $color;
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 15px;
+    border: 3px solid #fff;
+    align-items: center;
+    justify-content: center;
+}
